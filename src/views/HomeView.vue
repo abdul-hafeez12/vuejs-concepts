@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Hello Vue Js learning Home Page</h1>
+     <button @click="useCase1Clicked">Open New Route</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { UseCaseLoader} from '../MyCase/mycase.js';
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld
-  }
-}
+  },
+  methods: {
+     useCase1Clicked() {
+      UseCaseLoader(this)   
+    },
+  },
+  setup() {
+    return {  };
+  },
+};
 </script>
